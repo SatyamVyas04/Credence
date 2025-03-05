@@ -12,6 +12,7 @@
     "@auth/mongodb-adapter": "^3.8.0",
     "@auth/prisma-adapter": "^2.8.0",
     "@prisma/client": "^6.4.1",
+    "@radix-ui/react-slot": "^1.1.2",
     "@tabler/icons-react": "^3.30.0",
     "@types/bcryptjs": "^2.4.6",
     "bcryptjs": "^3.0.2",
