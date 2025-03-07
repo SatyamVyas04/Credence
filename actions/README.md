@@ -9,15 +9,15 @@ This directory contains server-side actions for the application.
 ```typescript
 // actions/user.ts
 export async function getUser(userId: string) {
-  // Fetch user from database
+	// Fetch user from database
 }
 
 export async function getUserRole(userId: string) {
-  // Get user role from database
+	// Get user role from database
 }
 
 export async function updateUserProfile(userId: string, data: UserProfile) {
-  // Update user profile
+	// Update user profile
 }
 ```
 
@@ -26,11 +26,11 @@ export async function updateUserProfile(userId: string, data: UserProfile) {
 ```typescript
 // actions/auth.ts
 export async function signIn(credentials: Credentials) {
-  // Handle user sign in
+	// Handle user sign in
 }
 
 export async function signOut() {
-  // Handle user sign out
+	// Handle user sign out
 }
 ```
 
@@ -39,15 +39,15 @@ export async function signOut() {
 ```typescript
 // actions/data.ts
 export async function createRecord(data: any) {
-  // Create new record
+	// Create new record
 }
 
 export async function updateRecord(id: string, data: any) {
-  // Update existing record
+	// Update existing record
 }
 
 export async function deleteRecord(id: string) {
-  // Delete record
+	// Delete record
 }
 ```
 
@@ -63,10 +63,10 @@ export async function deleteRecord(id: string) {
 
 ```typescript
 // app/page.tsx
-import { getUser } from "@/actions/user";
+import { getUser } from '@/actions/user'
 
 export default async function Page() {
-  const user = await getUser("123");
-  // Use the data
+	const user = await getUser('123')
+	// Use the data
 }
 ```

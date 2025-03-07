@@ -11,11 +11,11 @@ Custom hooks allow you to extract component logic into reusable functions. This 
 To use a hook from this directory:
 
 ```javascript
-import useCustomHook from "@/hooks/useCustomHook";
+import useCustomHook from '@/hooks/useCustomHook'
 
 function MyComponent() {
-  const result = useCustomHook();
-  // ...
+	const result = useCustomHook()
+	// ...
 }
 ```
 

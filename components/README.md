@@ -1,6 +1,6 @@
 # Components Directory Structure
 
-This directory contains reusable components organized into three main categories:
+This directory contains reusable components organized into four main categories:
 
 ## `/ui`
 
@@ -36,17 +36,29 @@ Common components used across multiple pages:
 - Layout wrappers
 - etc.
 
+## `/forms`
+
+Form components and related utilities.
+
+- Input
+- Select
+- FormWrapper
+- etc.
+
 ## Usage
 
 Import components using:
 
 ```tsx
 // UI components
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button'
 
 // Section components
-import { DashboardLeetcodeCard } from "@/components/sections/page-dashboard-leetcode-card";
+import { DashboardLeetcodeCard } from '@/components/sections/page-dashboard-leetcode-card'
 
 // Generic components
-import { Header } from "@/components/generic/header";
+import { Header } from '@/components/generic/header'
+
+// Form components
+import { Input } from '@/components/forms/input'
 ```

@@ -6,6 +6,7 @@ This directory contains static assets for the project.
 
 ```
 public/
+├── fonts/      # Font files used in the application
 ├── images/     # General images used throughout the application
 ├── logo/       # Logo files and brand assets
 └── seo/        # Search Engine Optimization related files
@@ -13,6 +14,7 @@ public/
 
 ## Usage
 
+- `fonts/`: Store all font files used in the application
 - `images/`: Store all general purpose images, photos, and graphics
 - `logo/`: Contains brand logos in various formats and sizes
 - `seo/`: Houses SEO-related files like robots.txt, sitemap.xml, and meta images
