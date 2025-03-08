@@ -38,6 +38,12 @@ This directory contains the main application code for Credence project.
 - Server-side functionality
 - API endpoint definitions
 
+### `/auth`
+
+- Authentication related pages
+- Login and registration components
+- Password reset functionality
+
 ### `/` (root)
 
 - Protected pages

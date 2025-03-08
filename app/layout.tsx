@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { ThemeProvider } from '@/components/theme-provider'
+import { SessionProvider } from 'next-auth/react'
 import './globals.css'
+import { auth } from '@/lib/auth'
 
 export const metadata: Metadata = {
 	title: 'Credence',
@@ -21,23 +23,27 @@ export const metadata: Metadata = {
 	},
 }
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 }: Readonly<{
 	children: React.ReactNode
 }>) {
+	const session = await auth()
+
 	return (
-		<html lang="en" suppressHydrationWarning>
-			<body className="font-raleway">
-				<ThemeProvider
-					attribute="class"
-					defaultTheme="system"
-					enableSystem
-					disableTransitionOnChange
-				>
-					{children}
-				</ThemeProvider>
-			</body>
-		</html>
+		<SessionProvider session={session}>
+			<html lang="en" suppressHydrationWarning>
+				<body className="font-satoshi flex min-h-screen items-center justify-center">
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						{children}
+					</ThemeProvider>
+				</body>
+			</html>
+		</SessionProvider>
 	)
 }
