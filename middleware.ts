@@ -10,7 +10,7 @@ export async function middleware(req: NextRequest) {
 	const { nextUrl } = req
 
 	const isPrivateRoute = privateRoutes.includes(nextUrl.pathname)
-	const isAuthRoute = nextUrl.pathname.includes('/login')
+	const isAuthRoute = nextUrl.pathname === '/login'
 	const isApiRoute = nextUrl.pathname.startsWith('/api')
 
 	// console.log('nextUrl', nextUrl)
