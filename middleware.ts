@@ -24,14 +24,18 @@ export async function middleware(req: NextRequest) {
 	}
 
 	if (isPrivateRoute && !isLoggedIn) {
-		return NextResponse.redirect('http://localhost:3000')
+		return NextResponse.redirect(new URL('http://localhost:3000'))
+	}
+
+	if (isAuthRoute && !isLoggedIn) {
+		return
 	}
 
 	if (isAuthRoute && isLoggedIn) {
-		return NextResponse.redirect('http://localhost:3000/home')
+		return NextResponse.redirect(new URL('http://localhost:3000/home'))
 	}
 
-	return NextResponse.next()
+	return
 }
 
 export const config = {
