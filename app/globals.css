@@ -10,8 +10,8 @@
 }
 
 @font-face {
-	font-family: 'Lato';
-	src: url('/fonts/Lato-Regular.ttf') format('truetype');
+	font-family: 'Raleway';
+	src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
 }
 
 @layer base {
@@ -22,8 +22,8 @@
 		--card-foreground: hsl(240 10% 3.9%);
 		--popover: hsl(0 0% 100%);
 		--popover-foreground: hsl(240 10% 3.9%);
-		--primary: hsl(346.8 77.2% 49.8%);
-		--primary-foreground: hsl(355.7 100% 97.3%);
+		--primary: hsl(240 5.9% 10%);
+		--primary-foreground: hsl(0 0% 98%);
 		--secondary: hsl(240 4.8% 95.9%);
 		--secondary-foreground: hsl(240 5.9% 10%);
 		--muted: hsl(240 4.8% 95.9%);
@@ -34,40 +34,52 @@
 		--destructive-foreground: hsl(0 0% 98%);
 		--border: hsl(240 5.9% 90%);
 		--input: hsl(240 5.9% 90%);
-		--ring: hsl(346.8 77.2% 49.8%);
+		--ring: hsl(240 5.9% 10%);
 		--radius: 0.5rem;
-		--chart-1: hsl(12 76% 61%);
-		--chart-2: hsl(173 58% 39%);
-		--chart-3: hsl(197 37% 24%);
-		--chart-4: hsl(43 74% 66%);
-		--chart-5: hsl(27 87% 67%);
+		--chart-1: #1e66f5;
+		--chart-2: #04a5e5;
+		--chart-3: #179299;
+		--chart-4: #40a02b;
+		--chart-5: #df8e1d;
+		--chart-6: #fe640b;
+		--chart-7: #e64553;
+		--chart-8: #d20f39;
+		--chart-9: #8839ef;
+		--chart-10: #ea76cb;
+		--chart-11: #dc8a78;
 	}
 
 	.dark {
-		--background: hsl(20 14.3% 4.1%);
-		--foreground: hsl(0 0% 95%);
-		--card: hsl(24 9.8% 10%);
-		--card-foreground: hsl(0 0% 95%);
-		--popover: hsl(0 0% 9%);
-		--popover-foreground: hsl(0 0% 95%);
-		--primary: hsl(346.8 77.2% 49.8%);
-		--primary-foreground: hsl(355.7 100% 97.3%);
+		--background: hsl(240 10% 3.9%);
+		--foreground: hsl(0 0% 98%);
+		--card: hsl(240 10% 3.9%);
+		--card-foreground: hsl(0 0% 98%);
+		--popover: hsl(240 10% 3.9%);
+		--popover-foreground: hsl(0 0% 98%);
+		--primary: hsl(0 0% 98%);
+		--primary-foreground: hsl(240 5.9% 10%);
 		--secondary: hsl(240 3.7% 15.9%);
 		--secondary-foreground: hsl(0 0% 98%);
-		--muted: hsl(0 0% 15%);
+		--muted: hsl(240 3.7% 15.9%);
 		--muted-foreground: hsl(240 5% 64.9%);
-		--accent: hsl(12 6.5% 15.1%);
+		--accent: hsl(240 3.7% 15.9%);
 		--accent-foreground: hsl(0 0% 98%);
 		--destructive: hsl(0 62.8% 30.6%);
-		--destructive-foreground: hsl(0 85.7% 97.3%);
+		--destructive-foreground: hsl(0 0% 98%);
 		--border: hsl(240 3.7% 15.9%);
 		--input: hsl(240 3.7% 15.9%);
-		--ring: hsl(346.8 77.2% 49.8%);
-		--chart-1: hsl(220 70% 50%);
-		--chart-2: hsl(160 60% 45%);
-		--chart-3: hsl(30 80% 55%);
-		--chart-4: hsl(280 65% 60%);
-		--chart-5: hsl(340 75% 55%);
+		--ring: hsl(240 4.9% 83.9%);
+		--chart-1: #89b4fa;
+		--chart-2: #89dceb;
+		--chart-3: #94e2d5;
+		--chart-4: #a6e3a1;
+		--chart-5: #f9e2af;
+		--chart-6: #fab387;
+		--chart-7: #eba0ac;
+		--chart-8: #f38ba8;
+		--chart-9: #cba6f7;
+		--chart-10: #f5c2e7;
+		--chart-11: #f5e0dc;
 	}
 }
 
@@ -96,6 +108,12 @@
 	--color-chart-3: var(--chart-3);
 	--color-chart-4: var(--chart-4);
 	--color-chart-5: var(--chart-5);
+	--color-chart-6: var(--chart-6);
+	--color-chart-7: var(--chart-7);
+	--color-chart-8: var(--chart-8);
+	--color-chart-9: var(--chart-9);
+	--color-chart-10: var(--chart-10);
+	--color-chart-11: var(--chart-11);
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
 	--radius-lg: var(--radius);
@@ -109,7 +127,7 @@
 	--color-sidebar-border: var(--sidebar-border);
 	--color-sidebar-ring: var(--sidebar-ring);
 	--font-playfair-display: 'Playfair Display', serif;
-	--font-lato: 'Lato', sans-serif;
+	--font-raleway: 'Raleway', sans-serif;
 }
 
 @layer base {
@@ -120,24 +138,30 @@
 		@apply bg-background text-foreground;
 	}
 	h1 {
-		@apply font-playfair-display text-primary mt-6 mb-4 scroll-m-20 text-4xl font-extrabold tracking-tight italic lg:text-5xl;
+		@apply font-playfair-display scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl;
 	}
 	h2 {
-		@apply font-playfair-display mt-4 mb-3 scroll-m-20 border-b pb-2 text-3xl font-extrabold tracking-tight;
+		@apply scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0;
 	}
 	h3 {
-		@apply my-2 scroll-m-20 text-2xl font-extrabold tracking-tight;
+		@apply scroll-m-20 text-2xl font-semibold tracking-tight;
 	}
 	h4 {
-		@apply mt-3 mb-2 scroll-m-20 text-xl font-semibold tracking-tight;
+		@apply scroll-m-20 text-xl font-semibold tracking-tight;
 	}
 	p {
-		@apply mt-2 mb-4 leading-7;
+		@apply leading-7 [&:not(:first-child)]:mt-3;
 	}
 	blockquote {
-		@apply mt-6 mb-4 border-l-2 pl-6 italic;
+		@apply mt-6 border-l-2 pl-6 italic;
+	}
+	ul {
+		@apply my-6 ml-6 list-disc [&>li]:mt-2;
 	}
 	code {
-		@apply bg-muted my-6 ml-6 list-disc rounded-md px-2 [&>li]:mt-2;
+		@apply bg-muted relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm font-semibold;
+	}
+	section {
+		@apply space-y-1 xl:space-y-3;
 	}
 }

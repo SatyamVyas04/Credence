@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className="font-lato">
+			<body className="font-raleway">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"

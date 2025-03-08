@@ -15,7 +15,19 @@ const colorCategories = [
 	{ name: 'Border/Input/Ring', vars: ['--border', '--input', '--ring'] },
 	{
 		name: 'Chart Colors',
-		vars: ['--chart-1', '--chart-2', '--chart-3', '--chart-4', '--chart-5'],
+		vars: [
+			'--chart-1',
+			'--chart-2',
+			'--chart-3',
+			'--chart-4',
+			'--chart-5',
+			'--chart-6',
+			'--chart-7',
+			'--chart-8',
+			'--chart-9',
+			'--chart-10',
+			'--chart-11',
+		],
 	},
 ]
 
@@ -76,7 +88,7 @@ const Typography = () => (
 				const Tag = tag as keyof JSX.IntrinsicElements
 				return (
 					<div key={label} className="px-4">
-						<div className="flex items-center gap-4">
+						<div className="flex items-center gap-4 py-2">
 							<span className="text-muted-foreground w-24 font-mono text-sm">
 								{label}
 							</span>
@@ -86,15 +98,6 @@ const Typography = () => (
 					</div>
 				)
 			})}
-		</div>
-
-		<div>
-			<h1>Sample Heading 1</h1>
-			<h2>Sample Heading 2</h2>
-			<p>
-				This is another paragraph under the headings to test text styling and
-				spacing.
-			</p>
 		</div>
 	</section>
 )
@@ -120,8 +123,8 @@ const ComponentExamples = () => (
 )
 
 const DesignBoard = () => (
-	<div className="bg-background text-foreground min-h-screen">
-		<div className="mx-auto max-w-6xl">
+	<article className="bg-background text-foreground min-h-screen p-4">
+		<section className="mx-auto max-w-6xl">
 			<div className="flex items-center justify-between">
 				<h1>Design System</h1>
 				<ModeToggle />
@@ -129,8 +132,8 @@ const DesignBoard = () => (
 			<ColorPalette />
 			<Typography />
 			<ComponentExamples />
-		</div>
-	</div>
+		</section>
+	</article>
 )
 
 export default DesignBoard
